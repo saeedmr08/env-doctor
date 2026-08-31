@@ -1,0 +1,36 @@
+{
+  "DATABASE_URL": {
+    "description": "Primary database connection string",
+    "required": true,
+    "kind": "url"
+  },
+  "API_BASE_URL": {
+    "description": "Upstream API base URL",
+    "required": true,
+    "kind": "url"
+  },
+  "NODE_ENV": {
+    "description": "Runtime environment",
+    "required": true,
+    "kind": "enum",
+    "enum": ["development", "test", "production"]
+  },
+  "SESSION_SECRET": {
+    "description": "Secret used to sign sessions",
+    "required": true,
+    "kind": "string",
+    "minLength": 16
+  },
+  "LOG_LEVEL": {
+    "description": "Application log verbosity",
+    "required": false,
+    "kind": "enum",
+    "enum": ["debug", "info", "warn", "error"]
+  },
+  "APP_NAME": {
+    "description": "Human-readable application name",
+    "required": false,
+    "kind": "string",
+    "minLength": 1
+  }
+}
